@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="video-main">
+        <div class="my-video" id="my-video"></div>
+        <div class="video-other" id="video-other"></div>
+      </div>
+      <div class="options">
+        <div class="options__left">
+          <div id="stopVideo" class="options__button">
+            <i class="fa fa-video-camera"></i>
+          </div>
+          <div id="muteButton" class="options__button">
+            <i class="fa fa-microphone"></i>
+          </div>
+          <div
+            class="options__button"
+            style="background-color: red"
+            onclick="getEndCall()"
+          >
+            <i class="fa-solid fa-phone-slash"></i>
+          </div>
+        </div>
+      </div>
+      <div class="overlay" id="overlay">
+        <!-- <h1 style="color: aliceblue;">Connecting...</h1> -->
+        <!-- sddsfd -->
+        <img src="img/front.jpg" alt="" width="100%">
+      </div>
+    </div>
+  </body>
+  <script>
+    const live_url = "<%=live_url %>";
+  </script>
+  <script src="js/joinMeeting.js"></script>
+</html>
